@@ -1,6 +1,6 @@
 # 🏗️ Structural Defect Detection AI
 
-## Theme 4 - Structural/Chemical Engineering | Group 2
+## Theme 4 - Structural/Chemical Engineering 
 
 ### 📋 Project Overview
 
@@ -22,11 +22,8 @@ This AI system detects structural defects from image data to assist in maintenan
 
 ### 👨‍💻 Team Members
 
-- Aidid Yassin (103992731)
-- Leon Nhor (104004239)
-- Matthew Hadkins (105249536)
-- Nathan Vu (104991276)
-- Xuan Tuan Minh Nguyen (103819212)
+- Nathan Vu 
+- Xuan Tuan Minh Nguyen
 
 ### 🔧 Technology Stack
 
@@ -44,7 +41,7 @@ This AI system detects structural defects from image data to assist in maintenan
 1. Clone the repository
 
 ```bash
-git clone https://github.com/cobeo2004/COS40007-Group-Project
+git clone https://github.com/NathanVuSwinburne/Structural-Defect-Detection-AI-for-Structural-Engineering.git
 ```
 
 2. Install the required packages
@@ -106,15 +103,14 @@ Our research focuses on applying computer vision and deep learning to automate s
 
 ### Model Training
 
-The AI models were trained on thousands of annotated images of various structural defects across different infrastructure types including bridges, buildings, and industrial facilities.
-
+The AI models were trained on a set of annotated images of 2 structural defects, which are rust and cracks, on the telecommunication towers. However, we believe that the model can still detect defects across different infrastructure types, including bridges, buildings, and industrial facilities.
 ### Future Development
 
 Future versions will include severity scoring, maintenance recommendations, and integration with structural monitoring systems for continuous assessment.
 
 ### Project Stats
 
-- Models: 2
+- Models: 2(Object detection model and segmentation model)
 - Dataset: 3K+ images
 
 ### Technical Details
