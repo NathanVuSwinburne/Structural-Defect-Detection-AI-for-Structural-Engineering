@@ -74,8 +74,6 @@ Our detection model establishes a solid foundation with room for enhancement:
 - **Rust**: 36,213 annotations (97% dominance)
 - **Cracks**: 402 annotations (3% representation)
 - **Impact**: Model bias toward rust detection, potential crack oversight
-![image](https://github.com/user-attachments/assets/d451af22-abea-4c6c-a36c-931064595df9)
-
 
 **📈 Improvement Roadmap:**
 1. **Data Acquisition**: Expand crack sample collection by 5-10x to prevent overfitting in bounding box model
@@ -154,7 +152,7 @@ Our **Streamlit-powered application** delivers an enterprise-grade user experien
 
 #### Data Quality Metrics
 
-*[Insert Figure 4: Comprehensive Dataset Analysis]*
+![image](https://github.com/user-attachments/assets/d451af22-abea-4c6c-a36c-931064595df9)
 
 **Annotation Statistics:**
 - **Average Annotations per Image**: 69.6
