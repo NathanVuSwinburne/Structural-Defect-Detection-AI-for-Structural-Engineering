@@ -2,7 +2,7 @@
 
 👷‍♀️ Smarter Inspections. Safer Structures. Built for the Real World.
 
-This project presents a comprehensive computer vision system that leverages the YOLOv8 architecture to automatically detect and classify structural defects, with a focus on telecommunications towers. Designed for real-time performance, it integrates seamlessly into industrial workflows, offering a reliable, scalable, and user-friendly AI solution.
+This project presents a comprehensive computer vision system that leverages the YOLOv8 architecture to automatically detect and classify structural defects, with a focus on telecommunications towers. Designed for real-time performance, it integrates seamlessly into industrial workflows, offering a reliable, scalable, and user-friendly AI solution. In the future, we want to integrate the AI model into drones and cameras as embedded AI systems capable of detecting structural defects on-site and retrieving actionable data.
 
 ---
 
@@ -62,7 +62,9 @@ Our detection model establishes a solid foundation with room for enhancement:
 | **Recall** | **0.179** | 0.152 | Limited by dataset constraints |
 | **mAP50** | **0.065** | 0.052 | Baseline for future improvements |
 
-*[Insert Figure 16: YOLOv8 Bounding Box Results - Foundation Model]*
+![image](https://github.com/user-attachments/assets/16ac481c-b191-4761-a520-013f46c497ee)
+
+
 
 ### Performance Analysis & Optimization Opportunities
 
@@ -72,16 +74,17 @@ Our detection model establishes a solid foundation with room for enhancement:
 - **Rust**: 36,213 annotations (97% dominance)
 - **Cracks**: 402 annotations (3% representation)
 - **Impact**: Model bias toward rust detection, potential crack oversight
+![image](https://github.com/user-attachments/assets/d451af22-abea-4c6c-a36c-931064595df9)
+
 
 **📈 Improvement Roadmap:**
-1. **Data Acquisition**: Expand crack sample collection by 5-10x
-2. **Synthetic Augmentation**: Generate crack variations using advanced techniques
-3. **Class Balancing**: Implement weighted loss functions and sampling strategies
-4. **Domain Adaptation**: Transfer learning from related structural defect datasets
+1. **Data Acquisition**: Expand crack sample collection by 5-10x to prevent overfitting in bounding box model
+2. **Class Balancing**: Implement weighted loss functions and sampling strategies
+3. **Domain Adaptation**: Transfer learning from related structural defect datasets
 
 **💡 Technical Innovation Applied:**
 - **Intelligent Tiling**: 2×2 grid strategy preserving fine-grained details
-- **Multi-Resolution Training**: 1280×1280 detection, 640×640 segmentation
+- **Multi-Resolution Training**: 1280×1280 image size for detection and 640×640 for segmentation
 - **Advanced Augmentation**: Real-world variation simulation
 - **Overfitting Mitigation**: Early stopping and regularization techniques
 
@@ -89,22 +92,19 @@ Our detection model establishes a solid foundation with room for enhancement:
 
 ## 🛠️ Production-Grade Implementation
 
+### Data Preprocessing
+1. Data Annotation
+![image](https://github.com/user-attachments/assets/fc9b3e4e-28d3-4de3-b0f2-1f647ef4701e)
+2.  Since YOLOv8 requires different data formats for object detection and segmentation tasks, we wrote a custom Python script on Google Colab to programmatically separate the labeled dataset into two subsets:
+ • A dataset formatted specifically for object detection using bounding box labels.
+ • A separate dataset was prepared for segmentation using polygon annotations.  
+3. Image Processing( 2x2 tiling, Images resizing, Auto-Orientation)
+4. Image Augmentation
+![image](https://github.com/user-attachments/assets/15c7292b-6b59-4ead-9276-3fddc2c03313)
+
 ### System Architecture
 
-```mermaid
-graph TD
-    A[High-Res Input] --> B[Preprocessing Pipeline]
-    B --> C[Intelligent Tiling]
-    C --> D[YOLOv8 Models]
-    D --> E[Detection Engine]
-    D --> F[Segmentation Engine]
-    E --> G[Result Fusion]
-    F --> G
-    G --> H[Web Interface]
-    H --> I[Real-time Analysis]
-    H --> J[Batch Processing]
-    H --> K[Export & Reporting]
-```
+![Untitled diagram _ Mermaid Chart-2025-07-02-134400](https://github.com/user-attachments/assets/d267e25c-66e9-4a7a-97e2-049fe71e144a)
 
 ### Professional Web Interface
 
@@ -199,14 +199,15 @@ Iteration 3: Transfer learning → mAP50: 0.054 (performance degradation)
 
 ### **Core Development Team**
 
-#### **🎯 Thanh Nam Vu** - *Technical Lead & ML Engineer*
+#### **🎯 Thanh Nam Vu** - *Technical Lead & Data Scientist & ML Engineer*
 **Primary Contributions:**
+- Code the python script to separate labels for each model
 - Complete preprocessing pipeline architecture
 - Advanced data augmentation implementation  
 - YOLOv8 bounding box model training and optimization
 - Technical strategy and project coordination
 
-#### **💻 Xuan Tuan Minh Nguyen** - *AI Engineer & Full-Stack Developer*
+#### **💻 Xuan Tuan Minh Nguyen** - *ML Engineer & Full-Stack Developer*
 **Primary Contributions:**
 - YOLOv8 segmentation model development and training
 - Complete Streamlit web application architecture
@@ -218,9 +219,7 @@ Iteration 3: Transfer learning → mAP50: 0.054 (performance degradation)
 - Collaborative data labeling and quality control
 - Annotation consistency validation
 - Dataset preparation support
-
-**Academic Supervision:** Afzal Azeem Chowdhary
-
+- 
 ---
 
 ## 🚀 Getting Started - Production Deployment
@@ -228,29 +227,14 @@ Iteration 3: Transfer learning → mAP50: 0.054 (performance degradation)
 ### Quick Installation
 ```bash
 # Clone repository
-git clone [repository-url]
-cd structural-defect-detection
+git clone https://github.com/NathanVuSwinburne/Structural-Defect-Detection-AI-for-Structural-Engineering.git
 
 # Setup environment
 pip install -r requirements.txt
 
 # Launch application
-streamlit run app.py
-# → Access at http://localhost:8501
+streamlit run 1_Home_Page.py
 ```
-
-### Docker Deployment
-```dockerfile
-# Production-ready containerization
-FROM python:3.9-slim
-COPY . /app
-WORKDIR /app
-RUN pip install -r requirements.txt
-EXPOSE 8501
-CMD ["streamlit", "run", "app.py"]
-```
-
----
 
 ## 📈 Performance Benchmarks & Metrics
 
@@ -266,29 +250,15 @@ CMD ["streamlit", "run", "app.py"]
 - **Data-Limited Performance**: Expected results given dataset constraints
 - **Scalability Potential**: Architecture proven for expansion
 
-### Real-World Performance Metrics
-```
-Processing Speed: ~2-3 FPS on CPU, ~15-20 FPS on GPU
-Memory Usage: 4-6GB during inference
-Accuracy: 96%+ for segmentation, 68% precision for detection
-Supported Formats: JPG, PNG, MP4, AVI, live camera feeds
-```
-
----
-
 ## 🔮 Future Development Roadmap
 
 ### **Phase 1: Data Enhancement** (0-3 months)
 - [ ] Crack dataset expansion (target: 10x current size)
-- [ ] Synthetic data generation pipeline
 - [ ] Advanced augmentation techniques
-- [ ] Cross-domain dataset integration
 
-### **Phase 2: Model Optimization** (3-6 months)
-- [ ] Ensemble model architecture
-- [ ] Real-time optimization for edge deployment
-- [ ] Mobile model variants (ONNX/TensorRT)
-- [ ] Advanced loss function implementation
+### **Phase 2: Model Deployment** (3-6 months)
+- [ ] Model Quantization reduces the precision of model weights and activations (typically from 32-bit floating-point to lower-precision integers like 8-bit) to decrease memory usage and computational cost, to ensure the model can be implemented on end devices.
+- [ ] Implement the model using C++ for flying drones to help catch defects
 
 ### **Phase 3: Enterprise Features** (6-12 months)
 - [ ] Cloud API deployment
@@ -298,10 +268,7 @@ Supported Formats: JPG, PNG, MP4, AVI, live camera feeds
 
 ---
 
-## 🏢 Commercial Potential & ROI
-
 ### **Market Opportunity**
-- Global infrastructure inspection market: $2.5B annually
 - Automation potential: 60-80% cost reduction
 - Safety improvement: 90% reduction in high-risk manual inspections
 
@@ -314,27 +281,12 @@ Supported Formats: JPG, PNG, MP4, AVI, live camera feeds
 
 ---
 
-## 📞 Contact & Collaboration
-
-**Primary Contacts:**
-- **Thanh Nam Vu** - Technical Lead & ML Engineer
-- **Xuan Tuan Minh Nguyen** - AI Engineer & Full-Stack Developer
-
-**Academic Institution:** Swinburne University of Technology  
-**Course:** COS40007 - Artificial Intelligence for Engineering  
-**Semester:** 1, 2025
-
----
 
 ## 📄 Technical Documentation
 
 ### **Resources & Links**
-- 📋 **Source Code**: [YOLOv8 Training Notebooks]
-- 🖥️ **Web Application**: [Streamlit Interface Code]
-- 📊 **Dataset**: [Processed Training Data]
-- 🎯 **Trained Models**: [Production Model Files]
-- 📹 **Demonstration**: [System Demo Video]
-- 📖 **Installation Guide**: [Deployment Documentation]
+- 📹 **Demonstration**: [[System Demo Video]](https://drive.google.com/file/d/1VkNdEK07nbtEttTTNRsKyt44irVGaFOZ/view?usp=sharing)
+- 📖 **Project Documentation**: [[Deployment Documentation]](https://drive.google.com/file/d/1o8FgJXdIuGkZv3Qt2C6PhoPeKwU4lwGt/view?usp=drive_link)
 
 ---
 
