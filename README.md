@@ -108,10 +108,11 @@ Our detection model establishes a solid foundation with room for enhancement:
 
 ### Professional Web Interface
 
-Our **Streamlit-powered application** delivers enterprise-grade user experience:
+Our **Streamlit-powered application** delivers an enterprise-grade user experience:
 
 #### **Dashboard Overview**
-*[Insert Figure 20: Professional Main Interface - Enterprise Design]*
+![image](https://github.com/user-attachments/assets/3c9922cc-7147-4324-935c-551c06cd8d3d)
+
 
 #### **Multi-Modal Analysis Capabilities**
 
@@ -121,23 +122,17 @@ Our **Streamlit-powered application** delivers enterprise-grade user experience:
 - Exportable annotated results
 - Detailed defect classification reports
 
-*[Insert Figure 22: Advanced Image Analysis Interface]*
-
 **2. Video Processing Engine**
 - Frame-by-frame defect tracking
 - Timeline visualization of defect progression
 - Batch video processing capabilities
 - Comprehensive analysis reports
 
-*[Insert Figure 27: Professional Video Analysis Timeline]*
-
 **3. Live Detection System**
 - Real-time webcam integration
 - Instant defect identification
 - Snapshot capture and analysis
 - Mobile-friendly responsive design
-
-*[Insert Figure 31: Real-Time Detection Interface]*
 
 ---
 
@@ -156,7 +151,6 @@ Our **Streamlit-powered application** delivers enterprise-grade user experience:
 3. **Intelligent Augmentation**: Physics-based transformation modeling
 4. **Format Optimization**: Task-specific data structure adaptation
 
-*[Insert Figure 6: Intelligent Tiling Strategy]*
 
 #### Data Quality Metrics
 
@@ -187,7 +181,8 @@ Iteration 2: 2×2 tiling @ 1280p → mAP50: 0.067 (optimal balance) ✅
 Iteration 3: Transfer learning → mAP50: 0.054 (performance degradation)
 ```
 
-*[Insert Figure 15: Model Performance Comparison Across Iterations]*
+![image](https://github.com/user-attachments/assets/930dc7ba-4d41-495d-a2c3-eb98adfc9875)
+
 
 **Resolution Strategy:**
 - **Detection Models**: 1280×1280 (fine-grained defect preservation)
@@ -201,7 +196,7 @@ Iteration 3: Transfer learning → mAP50: 0.054 (performance degradation)
 
 #### **🎯 Thanh Nam Vu** - *Technical Lead & Data Scientist & ML Engineer*
 **Primary Contributions:**
-- Code the python script to separate labels for each model
+- Code the Python script to separate labels for each model
 - Complete preprocessing pipeline architecture
 - Advanced data augmentation implementation  
 - YOLOv8 bounding box model training and optimization
