@@ -1,17 +1,19 @@
 # 🏗️ Structural Defect Detection AI for Structural/Chemical Engineering 
 
-**Production-Ready Deep Learning Solution for Infrastructure Inspection**
+👷‍♀️ Smarter Inspections. Safer Structures. Built for the Real World.
 
-A sophisticated computer vision system leveraging YOLOv8 architecture to automatically detect and classify structural defects in telecommunications towers, delivering real-time analysis capabilities for industrial applications.
+This project presents a comprehensive computer vision system that leverages the YOLOv8 architecture to automatically detect and classify structural defects, with a focus on telecommunications towers. Designed for real-time performance, it integrates seamlessly into industrial workflows, offering a reliable, scalable, and user-friendly AI solution.
 
 ---
 
 ## 🚀 Executive Summary
 
-This project represents a complete end-to-end AI solution addressing critical infrastructure maintenance challenges. Our system processes high-resolution drone imagery to identify structural defects with enterprise-grade accuracy, featuring a production-ready web interface and comprehensive analysis capabilities.
+This project showcases a full-stack AI solution tailored for infrastructure inspection and maintenance. Leveraging advanced object detection and segmentation models, the system efficiently processes drone imagery to identify defects with exceptional accuracy and clarity. Its professional Streamlit-based web interface ensures seamless user interaction, while its underlying architecture supports scalable, real-time operations.
+
+
 
 **Key Achievements:**
-- ✅ **Dual-Model Architecture**: Object detection + semantic segmentation
+- ✅ **Dual-Model Architecture**: Object detection + segmentation
 - ✅ **Real-Time Processing**: Live analysis with multi-modal input support
 - ✅ **Enterprise Interface**: Professional Streamlit-based web application
 - ✅ **Scalable Pipeline**: Handles 5K resolution imagery with intelligent preprocessing
@@ -48,7 +50,8 @@ Our segmentation model demonstrates **industry-leading performance** with near-p
 | **Recall** | **0.947** | 0.978 | 0.80-0.90 |
 | **mAP50** | **0.989** | 0.976 | 0.85-0.92 |
 
-*[Insert Figure 18: YOLOv8 Segmentation Results - Exceptional Performance]*
+![image](https://github.com/user-attachments/assets/1a1c3d26-be6e-440e-be0f-99b4ca440675)
+
 
 #### **Object Detection Model Performance** 📊 **BASELINE ESTABLISHED**
 Our detection model establishes a solid foundation with room for enhancement:
