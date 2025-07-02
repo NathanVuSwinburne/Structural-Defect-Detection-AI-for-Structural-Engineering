@@ -24,7 +24,7 @@ This project showcases a full-stack AI solution tailored for infrastructure insp
 ## 🎯 Business Value & Applications
 
 ### Primary Use Cases
-- **Infrastructure Maintenance**: Automated defect detection reducing manual inspection costs by 60-80%
+- **Infrastructure Maintenance**: Automated defect detection reduces manual inspection costs by 60-80%
 - **Safety Enhancement**: Early identification of structural issues preventing catastrophic failures
 - **Compliance Reporting**: Automated documentation for regulatory requirements
 - **Asset Management**: Predictive maintenance scheduling based on defect progression
