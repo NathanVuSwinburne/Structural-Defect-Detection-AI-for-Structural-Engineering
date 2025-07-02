@@ -38,11 +38,12 @@ with col2:
     st.markdown(
         """
     ### 👨‍💻 Team Members
-    - Aidid Yassin (103992731)
-    - Leon Nhor (104004239)
-    - Matthew Hadkins (105249536)
-    - Nathan Vu (104991276)
-    - Xuan Tuan Minh Nguyen (103819212)
+    - Nathan Vu 
+    - Xuan Tuan Minh Nguyen 
+    ### Contributors
+    - Aidid Yassin 
+    - Leon Nhor 
+    - Matthew Hadkins
 
     ### 🔧 Technology Stack
     - Python & Streamlit
