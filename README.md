@@ -44,11 +44,11 @@ This project showcases a full-stack AI solution tailored for infrastructure insp
 #### **Segmentation Model Performance** ⭐ **EXCEPTIONAL**
 Our segmentation model demonstrates **industry-leading performance** with near-perfect accuracy:
 
-| Metric | YOLOv8m-seg | YOLOv5m-seg | Industry Standard |
+| Metric | YOLOv8m-seg | Industry Standard |
 |--------|-------------|-------------|------------------|
-| **Precision** | **0.966** | 0.998 | 0.85-0.90 |
-| **Recall** | **0.947** | 0.978 | 0.80-0.90 |
-| **mAP50** | **0.989** | 0.976 | 0.85-0.92 |
+| **Precision** | **0.966**| 0.85-0.90 |
+| **Recall** | **0.947** | 0.80-0.90 |
+| **mAP50** | **0.989** | 0.85-0.92 |
 
 ![image](https://github.com/user-attachments/assets/1a1c3d26-be6e-440e-be0f-99b4ca440675)
 
