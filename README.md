@@ -140,7 +140,9 @@ Our **Streamlit-powered application** delivers an enterprise-grade user experien
 ### Data Pipeline Architecture
 
 **Original Dataset**: 572 high-resolution telecommunications tower images
+
 **Processing Output**: 3,044 intelligently augmented training samples
+
 **Quality Assurance**: Manual annotation with inter-annotator agreement protocols
 
 ![image](https://github.com/user-attachments/assets/caeccdbe-3fae-41bd-8cd4-4528368baf27)
@@ -253,7 +255,6 @@ streamlit run 1_Home_Page.py
 ### **Market Opportunity**
 - Automation potential: 60-80% cost reduction
 - Safety improvement: 90% reduction in high-risk manual inspections
-- 
 
 ## 📄 Technical Documentation
 
