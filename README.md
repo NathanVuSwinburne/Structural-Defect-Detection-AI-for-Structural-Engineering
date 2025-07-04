@@ -1,4 +1,4 @@
-# 🏗️ Structural Defect Detection AI for Structural/Chemical Engineering 
+![image](https://github.com/user-attachments/assets/65bb88b0-3506-43ea-b35f-48264b83d183)# 🏗️ Structural Defect Detection AI for Structural/Chemical Engineering 
 
 👷‍♀️ Smarter Inspections. Safer Structures. Built for the Real World.
 
@@ -103,6 +103,7 @@ Our detection model establishes a solid foundation with room for enhancement:
 ![image](https://github.com/user-attachments/assets/15c7292b-6b59-4ead-9276-3fddc2c03313)
 
 ### System Architecture
+We implemented a parallel-model fusion architecture to improve prediction abilities.
 
 ![Untitled diagram _ Mermaid Chart-2025-07-02-134400](https://github.com/user-attachments/assets/d267e25c-66e9-4a7a-97e2-049fe71e144a)
 
@@ -113,8 +114,6 @@ Our **Streamlit-powered application** delivers an enterprise-grade user experien
 #### **Dashboard Overview**
 ![image](https://github.com/user-attachments/assets/3c9922cc-7147-4324-935c-551c06cd8d3d)
 
-
-#### **Multi-Modal Analysis Capabilities**
 
 **1. Image Analysis Module**
 - Drag-and-drop upload interface
@@ -143,6 +142,9 @@ Our **Streamlit-powered application** delivers an enterprise-grade user experien
 **Original Dataset**: 572 high-resolution telecommunications tower images
 **Processing Output**: 3,044 intelligently augmented training samples
 **Quality Assurance**: Manual annotation with inter-annotator agreement protocols
+
+![image](https://github.com/user-attachments/assets/caeccdbe-3fae-41bd-8cd4-4528368baf27)
+
 
 #### Advanced Preprocessing Pipeline
 
@@ -214,7 +216,6 @@ Iteration 3: Transfer learning → mAP50: 0.054 (performance degradation)
 - Collaborative data labeling and quality control
 - Annotation consistency validation
 - Dataset preparation support
-- 
 ---
 
 ## 🚀 Getting Started - Production Deployment
@@ -230,20 +231,6 @@ pip install -r requirements.txt
 # Launch application
 streamlit run 1_Home_Page.py
 ```
-
-## 📈 Performance Benchmarks & Metrics
-
-### Model Comparison Analysis
-
-#### **Segmentation Excellence** 🏆
-- **YOLOv8m-seg**: Industry-leading mAP50 of 0.989
-- **Precision-Recall Balance**: Optimal for production deployment
-- **Computational Efficiency**: Real-time processing capability
-
-#### **Detection Foundation** 🔧
-- **Established Baseline**: Functional detection with clear improvement path
-- **Data-Limited Performance**: Expected results given dataset constraints
-- **Scalability Potential**: Architecture proven for expansion
 
 ## 🔮 Future Development Roadmap
 
@@ -266,25 +253,16 @@ streamlit run 1_Home_Page.py
 ### **Market Opportunity**
 - Automation potential: 60-80% cost reduction
 - Safety improvement: 90% reduction in high-risk manual inspections
-
-### **Technical Differentiators**
-- ✅ Production-ready implementation
-- ✅ Multi-modal input processing
-- ✅ Real-time analysis capabilities  
-- ✅ Scalable architecture design
-- ✅ Comprehensive evaluation metrics
-
----
-
+- 
 
 ## 📄 Technical Documentation
 
 ### **Resources & Links**
 - 📹 **Demonstration**: [[System Demo Video]](https://drive.google.com/file/d/1VkNdEK07nbtEttTTNRsKyt44irVGaFOZ/view?usp=sharing)
-- 📖 **Project Documentation**: [[Deployment Documentation]](https://drive.google.com/file/d/1o8FgJXdIuGkZv3Qt2C6PhoPeKwU4lwGt/view?usp=drive_link)
+- 📖 **Project Documentation**: Included in the GitHub repository.
 
 ---
 
-**This project demonstrates production-ready AI implementation combining cutting-edge computer vision research with practical engineering solutions. The system establishes a strong foundation for enterprise-scale structural inspection automation, with clear pathways for performance enhancement and commercial deployment.**
+**This project demonstrates production-ready AI implementation, combining cutting-edge computer vision research with practical engineering solutions. The system establishes a strong foundation for enterprise-scale structural inspection automation, with clear pathways for performance enhancement and commercial deployment.**
 
 *Developed with enterprise standards and production deployment in mind.*
