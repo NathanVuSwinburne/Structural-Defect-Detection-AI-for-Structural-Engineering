@@ -45,7 +45,7 @@ This project showcases a full-stack AI solution tailored for infrastructure insp
 Our segmentation model demonstrates **industry-leading performance** with near-perfect accuracy:
 
 | Metric | YOLOv8m-seg | Industry Standard |
-|--------|-------------|-------------|------------------|
+|--------|-------------|-------------------|
 | **Precision** | **0.966**| 0.85-0.90 |
 | **Recall** | **0.947** | 0.80-0.90 |
 | **mAP50** | **0.989** | 0.85-0.92 |
