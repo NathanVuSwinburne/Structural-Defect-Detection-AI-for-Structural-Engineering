@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/65bb88b0-3506-43ea-b35f-48264b83d183)# 🏗️ Structural Defect Detection AI for Structural/Chemical Engineering 
+# 🏗️ Structural Defect Detection AI for Structural/Chemical Engineering 
 
 👷‍♀️ Smarter Inspections. Safer Structures. Built for the Real World.
 
