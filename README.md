@@ -56,11 +56,11 @@ Our segmentation model demonstrates **industry-leading performance** with near-p
 #### **Object Detection Model Performance** 📊 **BASELINE ESTABLISHED**
 Our detection model establishes a solid foundation with room for enhancement:
 
-| Metric | YOLOv8m | YOLOv5m | Performance Notes |
-|--------|---------|---------|-------------------|
-| **Precision** | **0.686** | 0.615 | Strong positive prediction accuracy |
-| **Recall** | **0.179** | 0.152 | Limited by dataset constraints |
-| **mAP50** | **0.065** | 0.052 | Baseline for future improvements |
+| Metric | YOLOv8m | Performance Notes |
+|--------|---------|-------------------|
+| **Precision** | **0.686** | Strong positive prediction accuracy in classifying the type of defects |
+| **Recall** | **0.179** | Limited by dataset constraints |
+| **mAP50** | **0.065** | Baseline for future improvements |
 
 ![image](https://github.com/user-attachments/assets/16ac481c-b191-4761-a520-013f46c497ee)
 
