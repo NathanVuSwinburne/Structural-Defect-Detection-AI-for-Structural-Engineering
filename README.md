@@ -89,8 +89,10 @@ Our detection model establishes a solid foundation with room for enhancement:
 
 ### Data Preprocessing
 1. Data Annotation
+We used Roboflow as our data annotation platform. In particular, Polygonal annotation is used to annotate the tower structure and Bounding box annotation is used for defects(cracks and rust).
+
 ![image](https://github.com/user-attachments/assets/fc9b3e4e-28d3-4de3-b0f2-1f647ef4701e)
-2.  Since YOLOv8 requires different data formats for object detection and segmentation tasks, we wrote a custom Python script on Google Colab to programmatically separate the labeled dataset into two subsets, one for object detection using bounding box labels and one for segmentation using polygon annotations.
+3.  Since YOLOv8 requires different data formats for object detection and segmentation tasks, we wrote a custom Python script on Google Colab to programmatically separate the labeled dataset into two subsets, one for object detection using bounding box labels and one for segmentation using polygon annotations.
 
 ![image](https://github.com/user-attachments/assets/2ee744d4-1487-480a-88dd-8daac4abff9e)
 
