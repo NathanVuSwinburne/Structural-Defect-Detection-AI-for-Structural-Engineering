@@ -5,6 +5,11 @@
 This project presents a comprehensive computer vision system that leverages the YOLOv8 architecture to automatically detect and classify structural defects, with a focus on telecommunications towers. Designed for real-time performance, it integrates seamlessly into industrial workflows, offering a reliable, scalable, and user-friendly AI solution. In the future, we want to integrate the AI model into drones and cameras as embedded AI systems capable of detecting structural defects on-site and retrieving actionable data.
 
 ---
+Here is the link to our Streamlit website:
+https://structural-defect-detection-ai-for-structural-engineering.streamlit.app/
+
+Before the app fully runs, you might face a cold start for 2-3 minutes because we deployed the app on Steamlit cloud. To save your time, I suggest clicking it first. Then, while waiting, you can read the other sections below. 😊
+---
 
 ## 🚀 Executive Summary
 
@@ -37,18 +42,19 @@ This project showcases a full-stack AI solution tailored for infrastructure insp
 
 ---
 
-## 🏆 Technical Excellence
+### Performance Analysis & Optimization Opportunities
+
 
 ### Advanced Model Architecture
 
 #### **Segmentation Model Performance** ⭐ **EXCEPTIONAL**
 Our segmentation model demonstrates **industry-leading performance** with near-perfect accuracy:
 
-| Metric | YOLOv8m-seg | YOLOv5m-seg | Industry Standard |
-|--------|-------------|-------------|------------------|
-| **Precision** | **0.966** | 0.998 | 0.85-0.90 |
-| **Recall** | **0.947** | 0.978 | 0.80-0.90 |
-| **mAP50** | **0.989** | 0.976 | 0.85-0.92 |
+| Metric | YOLOv8m-seg | Industry Standard |
+|--------|-------------|-------------------|
+| **Precision** | **0.966**| 0.85-0.90 |
+| **Recall** | **0.947** | 0.80-0.90 |
+| **mAP50** | **0.989** | 0.85-0.92 |
 
 ![image](https://github.com/user-attachments/assets/1a1c3d26-be6e-440e-be0f-99b4ca440675)
 
@@ -56,17 +62,13 @@ Our segmentation model demonstrates **industry-leading performance** with near-p
 #### **Object Detection Model Performance** 📊 **BASELINE ESTABLISHED**
 Our detection model establishes a solid foundation with room for enhancement:
 
-| Metric | YOLOv8m | YOLOv5m | Performance Notes |
-|--------|---------|---------|-------------------|
-| **Precision** | **0.686** | 0.615 | Strong positive prediction accuracy |
-| **Recall** | **0.179** | 0.152 | Limited by dataset constraints |
-| **mAP50** | **0.065** | 0.052 | Baseline for future improvements |
+| Metric | YOLOv8m | Performance Notes |
+|--------|---------|-------------------|
+| **Precision** | **0.686** | Strong positive prediction accuracy in classifying the type of defects |
+| **Recall** | **0.179** | Limited by dataset constraints |
+| **mAP50** | **0.065** | Baseline for future improvements |
 
 ![image](https://github.com/user-attachments/assets/16ac481c-b191-4761-a520-013f46c497ee)
-
-
-
-### Performance Analysis & Optimization Opportunities
 
 #### Current Limitations & Strategic Solutions
 
@@ -74,8 +76,6 @@ Our detection model establishes a solid foundation with room for enhancement:
 - **Rust**: 36,213 annotations (97% dominance)
 - **Cracks**: 402 annotations (3% representation)
 - **Impact**: Model bias toward rust detection, potential crack oversight
-![image](https://github.com/user-attachments/assets/d451af22-abea-4c6c-a36c-931064595df9)
-
 
 **📈 Improvement Roadmap:**
 1. **Data Acquisition**: Expand crack sample collection by 5-10x to prevent overfitting in bounding box model
@@ -94,26 +94,30 @@ Our detection model establishes a solid foundation with room for enhancement:
 
 ### Data Preprocessing
 1. Data Annotation
+We used Roboflow as our data annotation platform. In particular, Polygonal annotation is used to annotate the tower structure and Bounding box annotation is used for defects(cracks and rust).
+
 ![image](https://github.com/user-attachments/assets/fc9b3e4e-28d3-4de3-b0f2-1f647ef4701e)
-2.  Since YOLOv8 requires different data formats for object detection and segmentation tasks, we wrote a custom Python script on Google Colab to programmatically separate the labeled dataset into two subsets:
- • A dataset formatted specifically for object detection using bounding box labels.
- • A separate dataset was prepared for segmentation using polygon annotations.  
+2.  Since YOLOv8 requires different data formats for object detection and segmentation tasks, we wrote a custom Python script on Google Colab to programmatically separate the labeled dataset into two subsets, one for object detection using bounding box labels and one for segmentation using polygon annotations.
+
+![image](https://github.com/user-attachments/assets/2ee744d4-1487-480a-88dd-8daac4abff9e)
+
 3. Image Processing( 2x2 tiling, Images resizing, Auto-Orientation)
 4. Image Augmentation
+
 ![image](https://github.com/user-attachments/assets/15c7292b-6b59-4ead-9276-3fddc2c03313)
 
 ### System Architecture
+We implemented a parallel-model fusion architecture to improve prediction abilities.
 
 ![Untitled diagram _ Mermaid Chart-2025-07-02-134400](https://github.com/user-attachments/assets/d267e25c-66e9-4a7a-97e2-049fe71e144a)
 
 ### Professional Web Interface
 
-Our **Streamlit-powered application** delivers enterprise-grade user experience:
+Our **Streamlit-powered application** delivers an enterprise-grade user experience:
 
 #### **Dashboard Overview**
-*[Insert Figure 20: Professional Main Interface - Enterprise Design]*
+![image](https://github.com/user-attachments/assets/3c9922cc-7147-4324-935c-551c06cd8d3d)
 
-#### **Multi-Modal Analysis Capabilities**
 
 **1. Image Analysis Module**
 - Drag-and-drop upload interface
@@ -121,23 +125,17 @@ Our **Streamlit-powered application** delivers enterprise-grade user experience:
 - Exportable annotated results
 - Detailed defect classification reports
 
-*[Insert Figure 22: Advanced Image Analysis Interface]*
-
 **2. Video Processing Engine**
 - Frame-by-frame defect tracking
 - Timeline visualization of defect progression
 - Batch video processing capabilities
 - Comprehensive analysis reports
 
-*[Insert Figure 27: Professional Video Analysis Timeline]*
-
 **3. Live Detection System**
 - Real-time webcam integration
 - Instant defect identification
 - Snapshot capture and analysis
 - Mobile-friendly responsive design
-
-*[Insert Figure 31: Real-Time Detection Interface]*
 
 ---
 
@@ -146,8 +144,13 @@ Our **Streamlit-powered application** delivers enterprise-grade user experience:
 ### Data Pipeline Architecture
 
 **Original Dataset**: 572 high-resolution telecommunications tower images
+
 **Processing Output**: 3,044 intelligently augmented training samples
+
 **Quality Assurance**: Manual annotation with inter-annotator agreement protocols
+
+![image](https://github.com/user-attachments/assets/caeccdbe-3fae-41bd-8cd4-4528368baf27)
+
 
 #### Advanced Preprocessing Pipeline
 
@@ -156,11 +159,10 @@ Our **Streamlit-powered application** delivers enterprise-grade user experience:
 3. **Intelligent Augmentation**: Physics-based transformation modeling
 4. **Format Optimization**: Task-specific data structure adaptation
 
-*[Insert Figure 6: Intelligent Tiling Strategy]*
 
 #### Data Quality Metrics
 
-*[Insert Figure 4: Comprehensive Dataset Analysis]*
+![image](https://github.com/user-attachments/assets/d451af22-abea-4c6c-a36c-931064595df9)
 
 **Annotation Statistics:**
 - **Average Annotations per Image**: 69.6
@@ -187,7 +189,8 @@ Iteration 2: 2×2 tiling @ 1280p → mAP50: 0.067 (optimal balance) ✅
 Iteration 3: Transfer learning → mAP50: 0.054 (performance degradation)
 ```
 
-*[Insert Figure 15: Model Performance Comparison Across Iterations]*
+![image](https://github.com/user-attachments/assets/930dc7ba-4d41-495d-a2c3-eb98adfc9875)
+
 
 **Resolution Strategy:**
 - **Detection Models**: 1280×1280 (fine-grained defect preservation)
@@ -201,7 +204,7 @@ Iteration 3: Transfer learning → mAP50: 0.054 (performance degradation)
 
 #### **🎯 Thanh Nam Vu** - *Technical Lead & Data Scientist & ML Engineer*
 **Primary Contributions:**
-- Code the python script to separate labels for each model
+- Code the Python script to separate labels for each model
 - Complete preprocessing pipeline architecture
 - Advanced data augmentation implementation  
 - YOLOv8 bounding box model training and optimization
@@ -219,7 +222,6 @@ Iteration 3: Transfer learning → mAP50: 0.054 (performance degradation)
 - Collaborative data labeling and quality control
 - Annotation consistency validation
 - Dataset preparation support
-- 
 ---
 
 ## 🚀 Getting Started - Production Deployment
@@ -235,20 +237,6 @@ pip install -r requirements.txt
 # Launch application
 streamlit run 1_Home_Page.py
 ```
-
-## 📈 Performance Benchmarks & Metrics
-
-### Model Comparison Analysis
-
-#### **Segmentation Excellence** 🏆
-- **YOLOv8m-seg**: Industry-leading mAP50 of 0.989
-- **Precision-Recall Balance**: Optimal for production deployment
-- **Computational Efficiency**: Real-time processing capability
-
-#### **Detection Foundation** 🔧
-- **Established Baseline**: Functional detection with clear improvement path
-- **Data-Limited Performance**: Expected results given dataset constraints
-- **Scalability Potential**: Architecture proven for expansion
 
 ## 🔮 Future Development Roadmap
 
@@ -272,24 +260,14 @@ streamlit run 1_Home_Page.py
 - Automation potential: 60-80% cost reduction
 - Safety improvement: 90% reduction in high-risk manual inspections
 
-### **Technical Differentiators**
-- ✅ Production-ready implementation
-- ✅ Multi-modal input processing
-- ✅ Real-time analysis capabilities  
-- ✅ Scalable architecture design
-- ✅ Comprehensive evaluation metrics
-
----
-
-
 ## 📄 Technical Documentation
 
 ### **Resources & Links**
 - 📹 **Demonstration**: [[System Demo Video]](https://drive.google.com/file/d/1VkNdEK07nbtEttTTNRsKyt44irVGaFOZ/view?usp=sharing)
-- 📖 **Project Documentation**: [[Deployment Documentation]](https://drive.google.com/file/d/1o8FgJXdIuGkZv3Qt2C6PhoPeKwU4lwGt/view?usp=drive_link)
+- 📖 **Project Documentation**: Included in the GitHub repository.
 
 ---
 
-**This project demonstrates production-ready AI implementation combining cutting-edge computer vision research with practical engineering solutions. The system establishes a strong foundation for enterprise-scale structural inspection automation, with clear pathways for performance enhancement and commercial deployment.**
+**This project demonstrates production-ready AI implementation, combining cutting-edge computer vision research with practical engineering solutions. The system establishes a strong foundation for enterprise-scale structural inspection automation, with clear pathways for performance enhancement and commercial deployment.**
 
 *Developed with enterprise standards and production deployment in mind.*
