@@ -37,7 +37,8 @@ This project showcases a full-stack AI solution tailored for infrastructure insp
 
 ---
 
-## 🏆 Technical Excellence
+### Performance Analysis & Optimization Opportunities
+
 
 ### Advanced Model Architecture
 
@@ -63,10 +64,6 @@ Our detection model establishes a solid foundation with room for enhancement:
 | **mAP50** | **0.065** | Baseline for future improvements |
 
 ![image](https://github.com/user-attachments/assets/16ac481c-b191-4761-a520-013f46c497ee)
-
-
-
-### Performance Analysis & Optimization Opportunities
 
 #### Current Limitations & Strategic Solutions
 
