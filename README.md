@@ -5,6 +5,11 @@
 This project presents a comprehensive computer vision system that leverages the YOLOv8 architecture to automatically detect and classify structural defects, with a focus on telecommunications towers. Designed for real-time performance, it integrates seamlessly into industrial workflows, offering a reliable, scalable, and user-friendly AI solution. In the future, we want to integrate the AI model into drones and cameras as embedded AI systems capable of detecting structural defects on-site and retrieving actionable data.
 
 ---
+Here is the link to our Streamlit website:
+https://structural-defect-detection-ai-for-structural-engineering.streamlit.app/
+
+Before the app fully runs, you might face a cold start for 2-3 minutes because we deployed the app on Steamlit cloud. To save your time, I suggest clicking it first. Then, while waiting, you can read the other sections below. 😊
+---
 
 ## 🚀 Executive Summary
 
