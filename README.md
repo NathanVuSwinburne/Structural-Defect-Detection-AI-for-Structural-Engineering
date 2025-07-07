@@ -70,23 +70,6 @@ Our detection model establishes a solid foundation with room for enhancement:
 
 ![image](https://github.com/user-attachments/assets/16ac481c-b191-4761-a520-013f46c497ee)
 
-#### Current Limitations & Strategic Solutions
-
-**🔍 Data Imbalance Challenge:**
-- **Rust**: 36,213 annotations (97% dominance)
-- **Cracks**: 402 annotations (3% representation)
-- **Impact**: Model bias toward rust detection, potential crack oversight
-
-**📈 Improvement Roadmap:**
-1. **Data Acquisition**: Expand crack sample collection by 5-10x to prevent overfitting in bounding box model
-2. **Class Balancing**: Implement weighted loss functions and sampling strategies
-3. **Domain Adaptation**: Transfer learning from related structural defect datasets
-
-**💡 Technical Innovation Applied:**
-- **Intelligent Tiling**: 2×2 grid strategy preserving fine-grained details
-- **Multi-Resolution Training**: 1280×1280 image size for detection and 640×640 for segmentation
-- **Advanced Augmentation**: Real-world variation simulation
-- **Overfitting Mitigation**: Early stopping and regularization techniques
 
 ---
 
@@ -138,6 +121,8 @@ Our **Streamlit-powered application** delivers an enterprise-grade user experien
 - Mobile-friendly responsive design
 
 ---
+## 📊 Data Source
+We obtained the dataset from Swinburne University of Technology. Due to privacy factors, we decided not to publish our dataset, however, we still add some images for everyone to test the model performance.
 
 ## 📊 Dataset Engineering Excellence
 
@@ -169,6 +154,26 @@ Our **Streamlit-powered application** delivers an enterprise-grade user experien
 - **Median Resolution**: 5280×3956 pixels (20.89 MP)
 - **Quality Assurance**: Cross-validation annotation review
 - **Processing Efficiency**: 534/572 images successfully processed (93.4%)
+
+#### Current Limitations & Strategic Solutions
+
+
+
+**🔍 Data Imbalance Challenge:**
+- **Rust**: 36,213 annotations (97% dominance)
+- **Cracks**: 402 annotations (3% representation)
+- **Impact**: Model bias toward rust detection, potential crack oversight
+
+**📈 Improvement Roadmap:**
+1. **Data Acquisition**: Expand crack sample collection by 5-10x to prevent overfitting in bounding box model
+2. **Class Balancing**: Implement weighted loss functions and sampling strategies
+3. **Domain Adaptation**: Transfer learning from related structural defect datasets
+
+**💡 Technical Innovation Applied:**
+- **Intelligent Tiling**: 2×2 grid strategy preserving fine-grained details
+- **Multi-Resolution Training**: 1280×1280 image size for detection and 640×640 for segmentation
+- **Advanced Augmentation**: Real-world variation simulation
+- **Overfitting Mitigation**: Early stopping and regularization techniques
 
 ---
 
