@@ -7,7 +7,7 @@ st.set_page_config(
 
 # Header section with title and subtitle
 st.title("🏗️ Structural Defect Detection AI")
-st.subheader("Theme 4 - Structural/Chemical Engineering | Group 2")
+st.subheader("AI for Structural/Chemical Engineering")
 
 # Create columns for better layout
 col1, col2 = st.columns([2, 1])
