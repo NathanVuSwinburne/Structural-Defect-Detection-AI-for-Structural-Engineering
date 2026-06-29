@@ -18,11 +18,11 @@ This project showcases a full-stack AI solution tailored for infrastructure insp
 
 
 **Key Achievements:**
-- ✅ **Dual-Model Architecture**: Object detection + segmentation
-- ✅ **Real-Time Processing**: Live analysis with multi-modal input support
-- ✅ **Enterprise Interface**: Professional Streamlit-based web application
-- ✅ **Scalable Pipeline**: Handles 5K resolution imagery with intelligent preprocessing
-- ✅ **Production Metrics**: Comprehensive performance evaluation and monitoring
+-  **Dual-Model Architecture**: Object detection + segmentation
+-  **Real-Time Processing**: Live analysis with multi-modal input support
+-  **Enterprise Interface**: Professional Streamlit-based web application
+-  **Scalable Pipeline**: Handles 5K resolution imagery with intelligent preprocessing
+-  **Production Metrics**: Comprehensive performance evaluation and monitoring
 
 ---
 
@@ -268,7 +268,6 @@ streamlit run 1_Home_Page.py
 ## 📄 Technical Documentation
 
 ### **Resources & Links**
-- 📹 **Demonstration**: [[System Demo Video]](https://drive.google.com/file/d/1VkNdEK07nbtEttTTNRsKyt44irVGaFOZ/view?usp=sharing)
 - 📖 **Project Documentation**: Included in the GitHub repository.
 
 ---
